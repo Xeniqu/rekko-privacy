@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rekko — Support</title>
+<meta name="description" content="Help and support for Rekko, the booking and client app for solo beauty professionals. FAQ, subscriptions, data and account help, and how to contact us." />
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111827;
+    background: #fafaf9;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+
+  header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 48px;
+  }
+  .logo {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: #065F46; color: #fff; display: grid; place-items: center;
+    font-weight: 700; font-size: 24px;
+  }
+  .brand { font-weight: 700; font-size: 24px; color: #065F46; letter-spacing: -0.3px; }
+
+  h1 {
+    font-size: 36px; line-height: 1.15; font-weight: 700; letter-spacing: -0.6px;
+    margin: 0 0 12px;
+  }
+  .lead { font-size: 18px; color: #4b5563; margin: 0 0 16px; max-width: 600px; }
+
+  .contact-card {
+    margin: 28px 0 48px; padding: 22px 24px;
+    background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px;
+  }
+  .contact-card h2 { margin: 0 0 6px; font-size: 18px; }
+  .contact-card p { margin: 0 0 4px; font-size: 15px; color: #4b5563; }
+  .contact-card a { color: #065F46; font-weight: 600; text-decoration: none; }
+  .contact-card a:hover { text-decoration: underline; }
+  .muted { color: #9ca3af; font-size: 13px; }
+
+  h2.section { font-size: 22px; margin: 44px 0 4px; letter-spacing: -0.3px; }
+
+  .faq { margin-top: 16px; }
+  details {
+    border: 1px solid #e5e7eb; border-radius: 12px;
+    background: #fff; margin-bottom: 12px; overflow: hidden;
+  }
+  summary {
+    cursor: pointer; list-style: none;
+    padding: 16px 20px; font-weight: 600; font-size: 16px; color: #111827;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: #065F46; font-size: 22px; font-weight: 400; line-height: 1; }
+  details[open] summary::after { content: "\2013"; }
+  details .body { padding: 0 20px 18px; color: #4b5563; font-size: 15px; }
+  details .body a { color: #065F46; text-decoration: none; }
+  details .body a:hover { text-decoration: underline; }
+
+  hr.subtle { border: none; border-top: 1px solid #e5e7eb; margin: 48px 0 32px; }
+  .links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+  .links a { color: #065F46; text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 56px; padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 13px; color: #9ca3af;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  footer a { color: #6b7280; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">R</div>
+    <div class="brand">Rekko</div>
+  </header>
+
+  <h1>Support</h1>
+  <p class="lead">
+    Rekko is a booking and client app for solo beauty professionals —
+    nail, brow, and lash artists working on their own. Below are answers to
+    common questions. If you don't find what you need, just email us — a real
+    person reads every message.
+  </p>
+
+  <div class="contact-card">
+    <h2>Contact us</h2>
+    <p>Email: <a href="mailto:xeniqu@gmail.com?subject=Rekko%20support">xeniqu@gmail.com</a></p>
+    <p>We usually reply within 1–2 business days.</p>
+    <p class="muted">You can also write to us right from the app: Settings → Send feedback.</p>
+  </div>
+
+  <h2 class="section">Getting started</h2>
+  <div class="faq">
+    <details>
+      <summary>How do I add a client?</summary>
+      <div class="body">Open the Clients tab and tap “Add client.” You only need a name; phone, Instagram, and notes are optional and can be added anytime.</div>
+    </details>
+    <details>
+      <summary>How do I book an appointment?</summary>
+      <div class="body">In the Calendar tab, tap an empty time slot (or the + button), choose the client and service, set the time, and save.</div>
+    </details>
+    <details>
+      <summary>Can I set recurring appointments?</summary>
+      <div class="body">Yes. When creating an appointment, choose a repeat option (e.g. every week, every two weeks, every month). Rekko keeps the series going without creating an endless list.</div>
+    </details>
+  </div>
+
+  <h2 class="section">Reminders &amp; client retention</h2>
+  <div class="faq">
+    <details>
+      <summary>How do appointment reminders work?</summary>
+      <div class="body">Rekko sends you a local notification before each appointment. You can change how far in advance (15 min to 1 day) in Settings. Reminders use your device time format.</div>
+    </details>
+    <details>
+      <summary>What are “sleeping clients”?</summary>
+      <div class="body">Clients who haven’t booked in a while. Rekko surfaces them on the home screen, sorted by how much they used to spend, so you can reach out before they drift away for good.</div>
+    </details>
+    <details>
+      <summary>What are message templates?</summary>
+      <div class="body">Pre-written messages with placeholders for client name, service, date, and time. When you message a client about an appointment, pick a channel (WhatsApp or SMS) and a template, and the text is filled in for you. Creating multiple named templates is a Rekko Pro feature.</div>
+    </details>
+  </div>
+
+  <h2 class="section">Rekko Pro &amp; subscriptions</h2>
+  <div class="faq">
+    <details>
+      <summary>What’s included in Rekko Pro?</summary>
+      <div class="body">Unlimited clients, revenue analytics, multiple message templates, and premium light/dark themes. The free version covers the core calendar and client list.</div>
+    </details>
+    <details>
+      <summary>How does the free trial and billing work?</summary>
+      <div class="body">If a free trial is offered, it converts to a paid subscription when it ends unless you cancel at least 24 hours before. Subscriptions renew automatically through your Apple App Store account. Prices vary by region and are shown on the subscription screen before you buy.</div>
+    </details>
+    <details>
+      <summary>How do I restore a purchase?</summary>
+      <div class="body">Open the subscription screen in the app and tap “Restore purchases.” Make sure you’re signed in to the same Apple ID you used to subscribe.</div>
+    </details>
+    <details>
+      <summary>How do I cancel my subscription?</summary>
+      <div class="body">Subscriptions are managed by Apple. On your iPhone: Settings → your name → Subscriptions → Rekko → Cancel. Cancelling stops future renewals; you keep Pro until the current period ends.</div>
+    </details>
+    <details>
+      <summary>I have a promo code — where do I enter it?</summary>
+      <div class="body">On the subscription screen, tap “Have a promo code?” to open Apple’s redemption sheet.</div>
+    </details>
+    <details>
+      <summary>Can I get a refund?</summary>
+      <div class="body">Refunds are handled by Apple, not by Rekko. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</div>
+    </details>
+  </div>
+
+  <h2 class="section">Your data &amp; account</h2>
+  <div class="faq">
+    <details>
+      <summary>Is my client data private?</summary>
+      <div class="body">Yes. Your clients and appointments are yours. We never sell your data or share it for advertising. See our <a href="privacy.html">Privacy Policy</a> for details.</div>
+    </details>
+    <details>
+      <summary>How do I delete my account and data?</summary>
+      <div class="body">In the app: Settings → Delete account. This removes your content within 30 days (encrypted backups may persist up to 90 days). You can also email us to request deletion.</div>
+    </details>
+    <details>
+      <summary>Can I use Rekko in my language?</summary>
+      <div class="body">Rekko is available in many languages, including English, Russian, Ukrainian, German, French, Spanish, Portuguese, Polish, Czech, Turkish, Hindi, Japanese, Korean, Chinese and more. Change it in Settings → Language.</div>
+    </details>
+    <details>
+      <summary>Will Rekko work for a salon with several chairs?</summary>
+      <div class="body">Rekko is built for one person working solo. It’s not designed for multi-staff salons or for clients to book themselves online.</div>
+    </details>
+  </div>
+
+  <hr class="subtle" />
+
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:xeniqu@gmail.com?subject=Rekko%20support">Contact</a>
+  </div>
+
+  <footer>
+    <span>© 2026 Rekko</span>
+    <span><a href="mailto:xeniqu@gmail.com">xeniqu@gmail.com</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
