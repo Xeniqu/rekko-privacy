@@ -31,6 +31,10 @@
   li { margin-bottom: 4px; }
   .meta { color: #6b7280; font-size: 14px; margin: 0 0 32px; }
   a { color: #065F46; }
+  .callout {
+    background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 10px;
+    padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #065F46;
+  }
 </style>
 </head>
 <body>
@@ -42,13 +46,21 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective June 6, 2026</p>
+  <p class="meta">Effective June 18, 2026</p>
 
   <p>
     Rekko is a mobile app for beauty professionals and independent service providers
-    that helps manage clients, appointments, and reminders. This policy describes
-    what data we collect, how we use it, and what rights you have.
+    that helps you manage clients, appointments, reminders, consent forms, and your
+    business. This policy describes what data we collect, how we use it, who we share
+    it with, and what rights you have.
   </p>
+
+  <div class="callout">
+    <strong>Two kinds of data, two kinds of responsibility.</strong> For data about
+    <em>you</em> (your account, your subscription), Rekko is the data controller. For
+    data <em>you</em> enter about <em>your clients</em>, you are the controller and
+    Rekko acts as your processor — see Section 8.
+  </div>
 
   <h2>1. Data we collect</h2>
 
@@ -61,56 +73,104 @@
 
   <h3>1.2 Professional profile</h3>
   <ul>
-    <li>profession category (e.g. nails, tattoo);</li>
-    <li>working hours, services, prices, message templates;</li>
-    <li>currency, locale, time zone, week start, date format.</li>
+    <li>profession category (e.g. nails, tattoo, lashes, tutoring);</li>
+    <li>working hours, services, prices, message templates, portfolio photos;</li>
+    <li>currency, locale, time zone, week start, date format;</li>
+    <li>expenses and other business records you choose to enter.</li>
   </ul>
 
   <h3>1.3 Client data</h3>
   <p>
-    Data you add about your clients: names, phone numbers, notes, visit history,
-    appointments. This data belongs to you and is used only to operate the app on
-    your account. We do not share it with third parties and do not use it for
-    advertising.
+    Data you add about your clients: names, phone numbers, Instagram handles, photos,
+    notes, birthdays, visit history, appointments, and waitlist entries. This data
+    belongs to you and is used only to operate the app on your account. We do not sell
+    it, share it with third parties for their own purposes, or use it for advertising.
   </p>
 
-  <h3>1.4 Technical data</h3>
+  <h3>1.4 Health and other sensitive data (consent forms)</h3>
+  <p>
+    Some consent forms — medical intake, tattoo consent, and patch-test records — can
+    include information about a client's health, allergies, or medical conditions. Under
+    GDPR this is a <strong>special category</strong> of personal data. Because Rekko
+    cannot itself obtain consent from your clients, the app asks you to confirm, on each
+    such form, that the client has agreed to the processing of this information before
+    the form can be saved. This data is stored under your account and is used only to
+    render and store the form. Forms that do not collect health information (e.g.
+    aftercare instructions) do not require this step.
+  </p>
+
+  <h3>1.5 AI assistant</h3>
+  <p>
+    Rekko includes an optional AI assistant. When you ask it a question, the app sends a
+    minimized snapshot of your account — such as client first names, upcoming
+    appointments, services, and an aggregated financial summary — to Anthropic, PBC,
+    which generates the answer. <strong>Free-text client notes are deliberately excluded</strong>
+    from this snapshot to avoid transmitting sensitive details. Anthropic processes the
+    request to return a response and, under its commercial API terms, does not use the
+    data to train its models. The first time you use the assistant the app asks for your
+    explicit consent.
+  </p>
+
+  <h3>1.6 Automatic client reminders</h3>
+  <p>
+    If you enable automatic reminders (a Pro feature), Rekko's server can send reminder
+    messages to a client over WhatsApp via Twilio, Inc. To do this we share the client's
+    phone number, name, the service, and the appointment time with Twilio. A message is
+    sent <strong>only</strong> for clients you have individually marked as having
+    consented to reminders, and never to clients you have placed on "do not disturb."
+  </p>
+
+  <h3>1.7 Online booking page</h3>
+  <p>
+    If you enable your public booking page, clients can submit booking requests through
+    a web page hosted on Firebase Hosting. Information they enter (name, phone, chosen
+    service and time) is stored under your account so you can review and confirm the
+    booking.
+  </p>
+
+  <h3>1.8 Technical data</h3>
   <ul>
     <li>push notification token (Firebase Cloud Messaging) — for appointment reminders;</li>
     <li>anonymous usage events (e.g. screen viewed, button tapped) via Firebase Analytics;</li>
-    <li>device model and OS version — to diagnose compatibility issues.</li>
+    <li>device model and OS version — to diagnose compatibility issues;</li>
+    <li>app-attestation tokens (Apple App Attest / DeviceCheck, via Firebase App Check) — used only to verify that requests come from a genuine copy of the app and to prevent abuse; these do not identify you.</li>
   </ul>
 
-  <h3>1.5 Subscription data</h3>
+  <h3>1.9 Subscription data</h3>
   <p>
-    Rekko Pro purchases are processed by RevenueCat, Inc. We receive subscription
-    status, the platform identifier (Apple or Google), and an anonymous customer ID
-    linked to your Firebase UID. Payment card details are handled exclusively by
-    Apple App Store or Google Play — we never see or store them.
+    Rekko Pro purchases are processed by RevenueCat, Inc. We receive subscription status,
+    the platform identifier (Apple or Google), and a customer ID linked to your Firebase
+    UID. Payment card details are handled exclusively by the Apple App Store or Google
+    Play — we never see or store them.
   </p>
 
-  <h3>1.6 Notifications permission</h3>
+  <h3>1.10 Notifications permission</h3>
   <p>
-    The app requests permission to send notifications. Notifications are used
-    locally on your device to remind you about upcoming appointments and to alert
-    you about sleeping clients. They are scheduled by the app itself and, where
-    applicable, delivered via Firebase Cloud Messaging.
+    The app requests permission to send notifications. On-device notifications remind you
+    about upcoming appointments and sleeping clients; they are scheduled by the app and,
+    where applicable, delivered via Firebase Cloud Messaging. This is separate from the
+    automatic client reminders described in Section 1.6.
   </p>
 
   <h2>2. How we use data</h2>
   <ul>
     <li>operate your account and synchronize data across your devices;</li>
-    <li>send reminders about upcoming appointments and sleeping clients;</li>
+    <li>remind you about upcoming appointments and sleeping clients;</li>
+    <li>send automatic reminders to consenting clients, if you enable that feature;</li>
+    <li>generate answers from the AI assistant, if you use it;</li>
+    <li>create and store consent forms and signatures;</li>
     <li>process and validate your Pro subscription;</li>
     <li>measure aggregate, anonymous usage analytics to improve the product;</li>
-    <li>detect and fix technical issues.</li>
+    <li>verify app authenticity, prevent abuse, and fix technical issues.</li>
   </ul>
 
   <h2>3. Who we share data with</h2>
   <p>We do not sell your data. We rely on the following processors:</p>
   <ul>
-    <li><strong>Google Firebase</strong> (Google LLC) — Auth, Firestore, Cloud Messaging, Analytics;</li>
+    <li><strong>Google Firebase / Google Cloud</strong> (Google LLC) — Auth, Firestore, Cloud Functions, Cloud Messaging, Hosting, App Check, Analytics;</li>
     <li><strong>RevenueCat, Inc.</strong> — subscription management;</li>
+    <li><strong>Anthropic, PBC</strong> — AI assistant responses (only when you use the assistant);</li>
+    <li><strong>Twilio, Inc.</strong> — delivery of automatic WhatsApp reminders (only when you enable them);</li>
     <li><strong>Apple App Store / Google Play</strong> — payment processing;</li>
     <li><strong>Google Sign-In</strong> and <strong>Apple Sign-In</strong> — authentication providers (only if you choose them).</li>
   </ul>
@@ -119,53 +179,75 @@
     data protection measures.
   </p>
   <p>
-    These processors store and process data on servers located in the United States
-    and other countries. Where your data is transferred outside your region
-    (including to the United States), we rely on the standard contractual protections
-    offered by each processor.
+    These processors store and process data on servers located in the United States and
+    other countries. Where your data is transferred outside your region (including to the
+    United States), we rely on the standard contractual protections offered by each
+    processor.
   </p>
 
   <h2>4. Data retention and deletion</h2>
   <p>
     Data is retained while your account exists. When you delete your account from
-    Settings → Delete account, all content — clients, appointments, services,
-    templates, settings — is removed within 30 days. Encrypted backups may persist
-    for up to 90 days for disaster recovery.
+    Settings → Delete account, the app asks our server to permanently erase your entire
+    data tree — clients, appointments, services, consent forms, signatures, photos,
+    templates, expenses, and settings — together with your public booking page, your
+    subscription record at RevenueCat, and your authentication account. This erasure runs
+    immediately. Residual copies that may remain in our providers' encrypted backups are
+    overwritten on their normal backup-rotation cycle, within 30 days. The app also clears
+    its local offline cache on the device on next launch.
   </p>
 
   <h2>5. Your rights</h2>
-  <p>Under applicable law (including GDPR for EU users) you may:</p>
+  <p>Under applicable law (including GDPR for EU/EEA users and UK GDPR) you may:</p>
   <ul>
     <li>request a copy of your data;</li>
     <li>correct inaccurate data;</li>
     <li>delete your account and related data;</li>
-    <li>object to or restrict processing.</li>
+    <li>object to or restrict processing;</li>
+    <li>withdraw consent you have given (e.g. for the AI assistant), without affecting prior processing.</li>
   </ul>
   <p>To exercise these rights, email <a href="mailto:xeniqu@gmail.com">xeniqu@gmail.com</a>.</p>
   <p>
     <strong>California residents:</strong> we do not sell or share your personal
-    information, and you have the right to know what data we hold, request its
-    deletion, and not be discriminated against for exercising these rights. To make
-    a request, contact us at the email above.
+    information, and you have the right to know what data we hold, request its deletion,
+    and not be discriminated against for exercising these rights. To make a request,
+    contact us at the email above.
   </p>
 
   <h2>6. Children</h2>
   <p>
-    Rekko is not intended for individuals under 16. We do not knowingly collect
-    data from such users. If we learn that we have, we delete it.
+    Rekko is not intended for individuals under 16. We do not knowingly collect data from
+    such users. If we learn that we have, we delete it.
   </p>
 
   <h2>7. Changes to this policy</h2>
   <p>
-    We may update this policy. Material changes will be announced in-app or by
-    email at least 14 days before they take effect.
+    We may update this policy. Material changes will be announced in-app or by email at
+    least 14 days before they take effect.
   </p>
 
-  <h2>8. Contact</h2>
+  <h2>8. Roles, and your responsibilities as a controller</h2>
   <p>
-    Rekko is operated by Kseniia Vylegzhanina, an independent individual developer
-    based in Uzbekistan, who acts as the data controller. Questions or requests:
-    <a href="mailto:xeniqu@gmail.com">xeniqu@gmail.com</a>.
+    For data that identifies <strong>you</strong> — your account, profile, and
+    subscription — Rekko is the data controller. For data <strong>you enter about your
+    clients</strong>, including any health information in consent forms, <strong>you are
+    the controller</strong> and Rekko acts as your processor, handling that data on your
+    instructions to provide the app's features.
+  </p>
+  <p>
+    As the controller of your client data, you are responsible for having a lawful basis
+    to store it, for informing your clients how you use their information, and for
+    obtaining their consent where the law requires it — in particular before recording
+    health information and before sending automatic reminders. Rekko provides in-app
+    controls (per-client reminder consent, per-form health-data consent, and "do not
+    disturb") to help you meet these obligations.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    Rekko is operated by Kseniia Vylegzhanina, an independent individual developer based
+    in Uzbekistan, who acts as the data controller for account data. Questions or
+    requests: <a href="mailto:xeniqu@gmail.com">xeniqu@gmail.com</a>.
   </p>
 
   <p style="margin-top:40px;font-size:14px;color:#6b7280;">
